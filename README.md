@@ -38,7 +38,7 @@ A modern, responsive weather dashboard built with Next.js, React, and TypeScript
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/apLanka/weather-dashbaord
    cd weather-dashboard
    ```
 
@@ -158,9 +158,3 @@ weather-dashboard/
 - [Radix UI](https://www.radix-ui.com/) for accessible component primitives
 - [Next.js](https://nextjs.org/) for the amazing React framework
 - Weather data providers for inspiration
-
----
-
-**Made with ❤️ and ☀️** 
-
-*Stay informed, stay prepared!* 
