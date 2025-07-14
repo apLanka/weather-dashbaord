@@ -10,8 +10,10 @@ export function WeatherMetrics() {
 
   return (
     <div className="space-y-4">
-      <h3 className="text-lg font-semibold text-slate-100 mb-4">Weather Details</h3>
-      
+      <h3 className="text-lg font-semibold text-slate-100 mb-4">
+        Weather Details
+      </h3>
+
       {/* Humidity */}
       <Card className="p-4 bg-slate-800/90 backdrop-blur-sm border-slate-700 shadow-xl">
         <div className="flex items-center gap-3 mb-3">
@@ -21,10 +23,14 @@ export function WeatherMetrics() {
         <div className="space-y-2">
           <div className="flex justify-between text-sm">
             <span className="text-slate-300">Current</span>
-            <span className="text-slate-100 font-medium">{metrics.humidity}%</span>
+            <span className="text-slate-100 font-medium">
+              {metrics.humidity}%
+            </span>
           </div>
           <Progress value={metrics.humidity} className="h-2" />
-          <p className="text-xs text-slate-400">{getHumidityDescription(metrics.humidity)}</p>
+          <p className="text-xs text-slate-400">
+            {getHumidityDescription(metrics.humidity)}
+          </p>
         </div>
       </Card>
 
@@ -36,8 +42,12 @@ export function WeatherMetrics() {
         </div>
         <div className="space-y-2">
           <div className="flex justify-between items-center">
-            <span className="text-slate-100 text-lg font-medium">{metrics.windSpeed}</span>
-            <span className="text-slate-300 text-sm">{metrics.windDirection}</span>
+            <span className="text-slate-100 text-lg font-medium">
+              {metrics.windSpeed}
+            </span>
+            <span className="text-slate-300 text-sm">
+              {metrics.windDirection}
+            </span>
           </div>
           <div className="flex justify-between text-xs text-slate-400">
             <span>Gusts up to {metrics.windGusts}</span>
@@ -52,10 +62,16 @@ export function WeatherMetrics() {
           <span className="text-slate-100 font-medium">Pressure</span>
         </div>
         <div className="space-y-2">
-          <div className="text-slate-100 text-lg font-medium">{metrics.pressure}</div>
+          <div className="text-slate-100 text-lg font-medium">
+            {metrics.pressure}
+          </div>
           <div className="flex items-center gap-2">
-            <div className={`w-2 h-2 rounded-full ${metrics.pressureTrend === 'rising' ? 'bg-emerald-400' : 'bg-red-400'}`}></div>
-            <span className="text-xs text-slate-400 capitalize">{metrics.pressureTrend}</span>
+            <div
+              className={`w-2 h-2 rounded-full ${metrics.pressureTrend === 'rising' ? 'bg-emerald-400' : 'bg-red-400'}`}
+            ></div>
+            <span className="text-xs text-slate-400 capitalize">
+              {metrics.pressureTrend}
+            </span>
           </div>
         </div>
       </Card>
@@ -68,8 +84,12 @@ export function WeatherMetrics() {
         </div>
         <div className="space-y-2">
           <div className="flex justify-between items-center">
-            <span className="text-slate-100 text-lg font-medium">{metrics.uvIndex}</span>
-            <span className={`text-xs px-2 py-1 rounded font-medium ${getUVIndexColor(metrics.uvIndex)}`}>
+            <span className="text-slate-100 text-lg font-medium">
+              {metrics.uvIndex}
+            </span>
+            <span
+              className={`text-xs px-2 py-1 rounded font-medium ${getUVIndexColor(metrics.uvIndex)}`}
+            >
               {getUVIndexLevel(metrics.uvIndex)}
             </span>
           </div>

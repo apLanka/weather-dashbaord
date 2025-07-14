@@ -15,20 +15,26 @@ export function CurrentWeather({ location }: CurrentWeatherProps) {
     <Card className="p-8 bg-slate-800/90 backdrop-blur-sm border-slate-700 text-slate-100 shadow-xl">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-lg font-medium text-slate-100">Current Weather</h2>
-          <p className="text-sm text-slate-300">{new Date().toLocaleDateString('en-US', { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-          })}</p>
+          <h2 className="text-lg font-medium text-slate-100">
+            Current Weather
+          </h2>
+          <p className="text-sm text-slate-300">
+            {new Date().toLocaleDateString('en-US', {
+              weekday: 'long',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </p>
         </div>
         <div className="text-right">
           <p className="text-sm text-slate-300">Last updated</p>
-          <p className="text-sm text-slate-100">{new Date().toLocaleTimeString('en-US', { 
-            hour: '2-digit', 
-            minute: '2-digit' 
-          })}</p>
+          <p className="text-sm text-slate-100">
+            {new Date().toLocaleTimeString('en-US', {
+              hour: '2-digit',
+              minute: '2-digit',
+            })}
+          </p>
         </div>
       </div>
 
@@ -37,11 +43,15 @@ export function CurrentWeather({ location }: CurrentWeatherProps) {
           <div className="flex items-center justify-center md:justify-start gap-4 mb-4">
             <WeatherIcon condition={weather.condition} size="large" />
             <div>
-              <div className="text-6xl font-light text-slate-100">{weather.temperature}°</div>
-              <div className="text-lg text-slate-200 capitalize">{weather.condition}</div>
+              <div className="text-6xl font-light text-slate-100">
+                {weather.temperature}°
+              </div>
+              <div className="text-lg text-slate-200 capitalize">
+                {weather.condition}
+              </div>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-4 text-sm text-slate-300">
             <span>Feels like {weather.feelsLike}°</span>
             <span>•</span>
@@ -52,19 +62,27 @@ export function CurrentWeather({ location }: CurrentWeatherProps) {
 
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-slate-700/50 rounded-lg p-4 text-center shadow-sm border border-slate-600">
-            <div className="text-2xl font-semibold text-blue-400">{weather.humidity}%</div>
+            <div className="text-2xl font-semibold text-blue-400">
+              {weather.humidity}%
+            </div>
             <div className="text-sm text-slate-300">Humidity</div>
           </div>
           <div className="bg-slate-700/50 rounded-lg p-4 text-center shadow-sm border border-slate-600">
-            <div className="text-2xl font-semibold text-emerald-400">{weather.windSpeed}</div>
+            <div className="text-2xl font-semibold text-emerald-400">
+              {weather.windSpeed}
+            </div>
             <div className="text-sm text-slate-300">Wind Speed</div>
           </div>
           <div className="bg-slate-700/50 rounded-lg p-4 text-center shadow-sm border border-slate-600">
-            <div className="text-2xl font-semibold text-purple-400">{weather.pressure}</div>
+            <div className="text-2xl font-semibold text-purple-400">
+              {weather.pressure}
+            </div>
             <div className="text-sm text-slate-300">Pressure</div>
           </div>
           <div className="bg-slate-700/50 rounded-lg p-4 text-center shadow-sm border border-slate-600">
-            <div className="text-2xl font-semibold text-amber-400">{weather.visibility}</div>
+            <div className="text-2xl font-semibold text-amber-400">
+              {weather.visibility}
+            </div>
             <div className="text-sm text-slate-300">Visibility</div>
           </div>
         </div>

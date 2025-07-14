@@ -10,7 +10,10 @@ interface WeatherHeaderProps {
   onLocationChange: (location: string) => void;
 }
 
-export function WeatherHeader({ selectedLocation, onLocationChange }: WeatherHeaderProps) {
+export function WeatherHeader({
+  selectedLocation,
+  onLocationChange,
+}: WeatherHeaderProps) {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     // In a real app, this would trigger API call
@@ -25,7 +28,7 @@ export function WeatherHeader({ selectedLocation, onLocationChange }: WeatherHea
             <h1 className="text-xl font-semibold">{selectedLocation}</h1>
           </div>
         </div>
-        
+
         <div className="flex items-center gap-4">
           <form onSubmit={handleSearch} className="flex items-center gap-2">
             <div className="relative">
@@ -36,15 +39,15 @@ export function WeatherHeader({ selectedLocation, onLocationChange }: WeatherHea
                 className="pl-10 bg-slate-700/50 border-slate-600 text-slate-100 placeholder:text-slate-400 focus:bg-slate-700 focus:border-blue-400 shadow-sm"
               />
             </div>
-            <Button 
-              type="submit" 
-              size="sm" 
+            <Button
+              type="submit"
+              size="sm"
               className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600 shadow-sm font-medium"
             >
               Search
             </Button>
           </form>
-          
+
           <Button
             variant="ghost"
             size="sm"

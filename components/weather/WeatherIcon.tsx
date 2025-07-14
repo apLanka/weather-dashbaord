@@ -1,13 +1,13 @@
 'use client';
 
-import { 
-  Sun, 
-  Cloud, 
-  CloudRain, 
-  CloudSnow, 
-  CloudLightning, 
+import {
+  Sun,
+  Cloud,
+  CloudRain,
+  CloudSnow,
+  CloudLightning,
   CloudDrizzle,
-  Cloudy
+  Cloudy,
 } from 'lucide-react';
 
 interface WeatherIconProps {
@@ -19,7 +19,7 @@ export function WeatherIcon({ condition, size = 'medium' }: WeatherIconProps) {
   const sizeClasses = {
     small: 'h-6 w-6',
     medium: 'h-8 w-8',
-    large: 'h-16 w-16'
+    large: 'h-16 w-16',
   };
 
   const iconClass = `${sizeClasses[size]} drop-shadow-lg`;

@@ -9,8 +9,10 @@ export function WeeklyForecast() {
 
   return (
     <Card className="p-6 bg-slate-800/90 backdrop-blur-sm border-slate-700 shadow-xl">
-      <h3 className="text-lg font-semibold text-slate-100 mb-4">7-Day Forecast</h3>
-      
+      <h3 className="text-lg font-semibold text-slate-100 mb-4">
+        7-Day Forecast
+      </h3>
+
       <div className="space-y-3">
         {weeklyData.map((day, index) => (
           <div
@@ -23,10 +25,12 @@ export function WeeklyForecast() {
               </div>
               <div className="flex items-center gap-3">
                 <WeatherIcon condition={day.condition} size="small" />
-                <div className="text-sm text-slate-300 capitalize">{day.condition}</div>
+                <div className="text-sm text-slate-300 capitalize">
+                  {day.condition}
+                </div>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-4">
               <div className="text-sm text-blue-400">{day.precipitation}%</div>
               <div className="flex items-center gap-2 text-slate-100">

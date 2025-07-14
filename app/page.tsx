@@ -14,11 +14,11 @@ export default function WeatherDashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-6 space-y-6">
-        <WeatherHeader 
+        <WeatherHeader
           selectedLocation={selectedLocation}
           onLocationChange={setSelectedLocation}
         />
-        
+
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
           {/* Left Column - Main Weather Info */}
           <div className="xl:col-span-2 space-y-6">
@@ -26,7 +26,7 @@ export default function WeatherDashboard() {
             <HourlyForecast />
             <WeeklyForecast />
           </div>
-          
+
           {/* Right Column - Additional Info */}
           <div className="space-y-6">
             <WeatherMetrics />
